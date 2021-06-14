@@ -15,12 +15,18 @@ let imgUrlOutput = document.getElementById('image-url-output');
 
 let submitButton = document.getElementById('submit');
 
+let codeOutput = document.getElementById('signature');
 function generate() {
     nameOutput.innerHTML = nameInput.value;
     positionOutput.innerHTML = positionInput.value;
     phoneOutput.innerHTML = phoneInput.value;
     emailOutput.innerHTML = emailInput.value;
     imgUrlOutput.src = imgUrlInput.value;
+    
+    
+    let codeToHighlight = document.getElementById('Tabela_01');
+    codeOutput.innerHTML = codeToHighlight.outerHTML
+    
 
 }
 
