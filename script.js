@@ -18,6 +18,7 @@ const bottomTextInput = document.getElementById('bottom-text');
 const bottomTextOutput = document.getElementById('bottom-output')
 const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
+const codeToHighlight = document.getElementById('Tabela_01');
 
 
 function generate() {
@@ -31,30 +32,52 @@ function generate() {
     liLinkOutput.href = liLinkInput.value;
     bottomTextOutput.innerHTML = bottomTextInput.value;
     
-    const codeToHighlight = '';
-    codeToHighlight = document.getElementById('Tabela_01').outerHTML;
-    codeOutput.innerHTML = codeToHighlight
-    console.log(codeToHighlight)
-    
+    codeOutput.innerHTML = codeToHighlight.outerHTML;
+    console.log(codeToHighlight);
+    return removeNonDisplayed();
 }
 submitButton.addEventListener('click', generate);
 
 
-let displayed = true
-const outputs = [...document.getElementsByClassName('icon-container')];
+let displayed = true;
+const outputs = [...document.getElementsByClassName('remove-button')];
 
 outputs.forEach(toggleElement);
 
 function toggleElement(icon) {
     icon.addEventListener('click', function() {
         if (displayed) {
-            document.getElementById(icon.id+'-output').style.display = 'none';
             displayed = false;
+            document.getElementById(icon.id+'-output').style.display = 'none';
             icon.querySelector('i').innerHTML = 'add';
+            icon.style.color = 'green';
         } else {
-            document.getElementById(icon.id+'-output').style.display = 'block';
             displayed = true;
+            document.getElementById(icon.id+'-output').style.display = 'block';
             icon.querySelector('i').innerHTML = 'remove';
+            icon.style.color = 'red';
         }
     })
 }
+
+const nameTypographyOpen = document.getElementById('name-typography-open')
+nameTypographyOpen.addEventListener('click', function() {
+    typographyPopup.style.display = 'block'
+})
+
+function removeNonDisplayed() {
+    const nonDisplayElements = [...codeToHighlight.querySelectorAll('*')];
+    nonDisplayElements.forEach(function(item) {
+        if (item.style.display === 'none') {
+            item.remove();
+        }
+    })
+    
+}
+removeNonDisplayed();
+
+const closeTypography = document.getElementById('close-typography');
+const typographyPopup = document.getElementById('typography');
+closeTypography.addEventListener('click', function() {
+    typographyPopup.style.display = 'none'
+})

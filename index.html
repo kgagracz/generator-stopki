@@ -13,31 +13,41 @@
 
 <div id="generator">
 	<div class="label-container">
-		<label for="name">Imię i nazwisko</label><input type="text" id="name" placeholder="Ania Kowalska">
+		<label for="name">Imię i nazwisko</label><input class="form-input" type="text" id="name" placeholder="Ania Kowalska"><div id="name-typography-open" class="icon-container"><i  class="material-icons">mode</i></div>
+		<div class="popup typography" id="typography">
+			<i class="material-icons close" id="close-typography">close</i>
+			<div class="popup-inner font-size-container">
+				<label class="popup-label" for="font-size">Rozmiar czcionki</label><input class="popup-input" id="font-size" type="number">
+			</div>
+			<div class="popup-inner font-color-container">
+				<label class="popup-label" for="font-color">Kolor czcionki</label><input class="popup-input" id="font-color" type="color">
+			</div>
+			<button class="button" id="name-typography">Zmień</button>
+		</div>
 	</div>
 	<div class="label-container">
-		<label for="position">Stanowisko</label><input type="text" id="position" placeholder="Sales specialist"><div id="position" class="icon-container"><i  class="material-icons">remove</i></div>
+		<label for="position">Stanowisko</label><input class="form-input" type="text" id="position" placeholder="Sales specialist"><div id="position" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
 	</div>
 	<div class="label-container">
-		<label for="phone">Nr telefonu</label><input type="text" id="phone" placeholder="+48 123 123 123">
+		<label for="phone">Nr telefonu</label><input class="form-input" type="text" id="phone" placeholder="+48 123 123 123">
 	</div>
 	<div class="label-container">
-		<label for="email">Adres email</label><input type="text" id="email" placeholder="name@company.pl">
+		<label for="email">Adres email</label><input class="form-input" type="text" id="email" placeholder="name@company.pl">
 	</div>
 	<div class="label-container">
-		<label for="img-url">Adres url zdjęcia profilu</label><input type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png"> <div id="image" class="icon-container"><i  class="material-icons">remove</i></div>
+		<label for="img-url">Adres url zdjęcia profilu</label><input class="form-input" type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png"> <div id="image" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
 	</div>
 	<div class="label-container">
-		<label for="fb-link">Link do profilu Facebook</label><input type="text" id="fb-link" placeholder="https://socialmedia.pl"><div id="fb" class="icon-container"><i  class="material-icons">remove</i></div>
+		<label for="fb-link">Link do profilu Facebook</label><input class="form-input" type="text" id="fb-link" placeholder="https://socialmedia.pl"><div id="fb" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
 	</div>
 	<div class="label-container">
-		<label for="ig-link">Link do profilu Instagram</label><input type="text" id="ig-link" placeholder="https://socialmedia.pl"><div id="ig" class="icon-container"><i  class="material-icons">remove</i></div>
+		<label for="ig-link">Link do profilu Instagram</label><input class="form-input" type="text" id="ig-link" placeholder="https://socialmedia.pl"><div id="ig" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
 	</div>
 	<div class="label-container">
-		<label for="li-link">Link do profilu Linked In</label><input type="text" id="li-link" placeholder="https://socialmedia.pl"><div id="li" class="icon-container"><i  class="material-icons">remove</i></div>
+		<label for="li-link">Link do profilu Linked In</label><input class="form-input" type="text" id="li-link" placeholder="https://socialmedia.pl"><div id="li" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
 	</div>
 	<div class="label-container">
-		<label for="bottom-text">Dolny tekst</label><textarea name="bottom-text" id="bottom-text" cols="30" rows="5" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?"></textarea><div id="bottom" class="icon-container"><i  class="material-icons">remove</i></div>
+		<label for="bottom-text">Dolny tekst</label><textarea class="form-input" name="bottom-text" id="bottom-text" cols="30" rows="5" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?"></textarea><div id="bottom" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
 	</div>
 	
 	<button id="submit">Wygeneruj</button>
@@ -63,11 +73,11 @@
 	</tr>
 	<tr>
 		<td>
-			<a style=" padding-left: 10px;" id="fb-output" href="http://facebook.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/facebook.png" width="30" height="30" alt=""></a></td>
+			<a style="padding-left: 10px;" id="fb-output" href="http://facebook.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/facebook.png" width="30" height="30" alt=""></a></td>
 		<td>
-			<a style=" padding-left: 10px;" id="ig-output" href="http://instagram.com"><img src="https://netsendo.com/wp-content/uploads/2021/06/instagram.png" width="30" height="30" alt=""></a></td>
+			<a style="padding-left: 10px;" id="ig-output" href="http://instagram.com"><img src="https://netsendo.com/wp-content/uploads/2021/06/instagram.png" width="30" height="30" alt=""></a></td>
 		<td>
-			<a style=" padding-left: 10px;" id="li-output" href="http://linkedin.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/linkedin.png" width="30" height="30" alt=""></a></td>
+			<a style="padding-left: 10px;" id="li-output" href="http://linkedin.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/linkedin.png" width="30" height="30" alt=""></a></td>
 		<td rowspan="2">
 			<ul style="list-style-type: none; font-size: 14px; display: flex; flex-wrap: wrap; color: grey; padding: 0 0 0 10px;">
 				<li style="width: 100%;"><span style="font-weight: bold;">tel: </span> <span id="phone-output">123 123 123</span> </li></br>
