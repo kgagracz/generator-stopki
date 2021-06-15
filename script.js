@@ -14,6 +14,11 @@ const igLinkInput = document.getElementById('ig-link');
 const igLinkOutput = document.getElementById('ig-output');
 const liLinkInput = document.getElementById('li-link');
 const liLinkOutput = document.getElementById('li-output');
+const bannerInput = document.getElementById('banner');
+const bannerOutput = document.getElementById('banner-output');
+const bannerLinkInput = document.getElementById('banner-link');
+const bannerLinkOutput = document.getElementById('banner-link-output');
+
 const bottomTextInput = document.getElementById('bottom-text');
 const bottomTextOutput = document.getElementById('bottom-output')
 const submitButton = document.getElementById('submit');
@@ -27,6 +32,8 @@ function generate() {
     phoneOutput.innerHTML = phoneInput.value;
     emailOutput.href = emailInput.value;
     imgUrlOutput.src = imgUrlInput.value;
+    bannerOutput.src = bannerInput.value;
+    bannerLinkOutput.href = bannerLinkInput.value;
     fbLinkOutput.href = fbLinkInput.value;
     igLinkOutput.href = igLinkInput.value;
     liLinkOutput.href = liLinkInput.value;
