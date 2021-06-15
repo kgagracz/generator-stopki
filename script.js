@@ -7,15 +7,15 @@ const phoneOutput = document.getElementById('phone-output');
 const emailInput = document.getElementById('email');
 const emailOutput = document.getElementById('email-output');
 const imgUrlInput = document.getElementById('image-url');
-const imgUrlOutput = document.getElementById('image-url-output');
+const imgUrlOutput = document.getElementById('image-output');
 const fbLinkInput = document.getElementById('fb-link');
-const fbLinkOutput = document.getElementById('fb-link-output');
+const fbLinkOutput = document.getElementById('fb-output');
 const igLinkInput = document.getElementById('ig-link');
-const igLinkOutput = document.getElementById('ig-link-output');
+const igLinkOutput = document.getElementById('ig-output');
 const liLinkInput = document.getElementById('li-link');
-const liLinkOutput = document.getElementById('li-link-output');
+const liLinkOutput = document.getElementById('li-output');
 const bottomTextInput = document.getElementById('bottom-text');
-const bottomTextOutput = document.getElementById('bottom-text-output')
+const bottomTextOutput = document.getElementById('bottom-output')
 const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
 
@@ -49,7 +49,9 @@ submitButton.addEventListener('click', generate);
 let array = [...document.getElementsByClassName('icon-container')];
 array.forEach(function(icon) {
     icon.addEventListener('click', function() {
-        document.getElementById(icon.id+'-link-output').remove();
+        document.getElementById(icon.id+'-output').remove();
+        
+
     })
 })
 

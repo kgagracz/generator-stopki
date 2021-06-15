@@ -12,15 +12,33 @@
 <body style="font-family: Montserrat;" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
 <div id="generator">
-	<label for="name">Imię i nazwisko</label><input type="text" id="name" placeholder="Ania Kowalska">
-	<label for="position">Stanowisko</label><input type="text" id="position" placeholder="Sales specialist">
-	<label for="phone">Nr telefonu</label><input type="text" id="phone" placeholder="+48 123 123 123">
-	<label for="email">Adres email</label><input type="text" id="email" placeholder="name@company.pl">
-	<label for="img-url">Adres url zdjęcia profilu</label><input type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png"> 
-	<label for="fb-link">Link do profilu Facebook</label><input type="text" id="fb-link" placeholder="https://socialmedia.pl"><div id="fb" class="icon-container"><i  class="material-icons">remove</i></div>
-	<label for="ig-link">Link do profilu Instagram</label><input type="text" id="ig-link" placeholder="https://socialmedia.pl"><div id="ig" class="icon-container"><i  class="material-icons">remove</i></div>
-	<label for="li-link">Link do profilu Linked In</label><input type="text" id="li-link" placeholder="https://socialmedia.pl"><div id="li" class="icon-container"><i  class="material-icons">remove</i></div>
-	<label for="bottom-text">Dolny tekst</label><textarea name="bottom-text" id="bottom-text" cols="30" rows="5" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?"></textarea>
+	<div class="label-container">
+		<label for="name">Imię i nazwisko</label><input type="text" id="name" placeholder="Ania Kowalska">
+	</div>
+	<div class="label-container">
+		<label for="position">Stanowisko</label><input type="text" id="position" placeholder="Sales specialist"><div id="position" class="icon-container"><i  class="material-icons">remove</i></div>
+	</div>
+	<div class="label-container">
+		<label for="phone">Nr telefonu</label><input type="text" id="phone" placeholder="+48 123 123 123">
+	</div>
+	<div class="label-container">
+		<label for="email">Adres email</label><input type="text" id="email" placeholder="name@company.pl">
+	</div>
+	<div class="label-container">
+		<label for="img-url">Adres url zdjęcia profilu</label><input type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png"> <div id="image" class="icon-container"><i  class="material-icons">remove</i></div>
+	</div>
+	<div class="label-container">
+		<label for="fb-link">Link do profilu Facebook</label><input type="text" id="fb-link" placeholder="https://socialmedia.pl"><div id="fb" class="icon-container"><i  class="material-icons">remove</i></div>
+	</div>
+	<div class="label-container">
+		<label for="ig-link">Link do profilu Instagram</label><input type="text" id="ig-link" placeholder="https://socialmedia.pl"><div id="ig" class="icon-container"><i  class="material-icons">remove</i></div>
+	</div>
+	<div class="label-container">
+		<label for="li-link">Link do profilu Linked In</label><input type="text" id="li-link" placeholder="https://socialmedia.pl"><div id="li" class="icon-container"><i  class="material-icons">remove</i></div>
+	</div>
+	<div class="label-container">
+		<label for="bottom-text">Dolny tekst</label><textarea name="bottom-text" id="bottom-text" cols="30" rows="5" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?"></textarea><div id="bottom" class="icon-container"><i  class="material-icons">remove</i></div>
+	</div>
 	
 	<button id="submit">Wygeneruj</button>
 </div>
@@ -37,7 +55,7 @@
 			<p id="name-output" style=" margin: 20px 0 0 10px; font-size: 28px; color: #5d2772; font-weight: bold;">Ania Kowalska</p>
 		</td>
 		<td rowspan="4">
-			<img id="image-url-output" src="https://netsendo.com/wp-content/uploads/2021/06/04.png" width="195" height="193" alt="profil" style="object-fit:contain;"></td>
+			<img id="image-output" src="https://netsendo.com/wp-content/uploads/2021/06/04.png" width="195" height="193" alt="profil" style="object-fit:contain;"></td>
 	</tr>
 	<tr>
 		<td>
@@ -45,11 +63,11 @@
 	</tr>
 	<tr>
 		<td>
-			<a id="fb-link-output" href="http://facebook.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/06.png" width="55" height="41" alt=""></a></td>
+			<a id="fb-output" href="http://facebook.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/06.png" width="55" height="41" alt=""></a></td>
 		<td>
-			<a id="ig-link-output" href="http://instagram.com"><img src="https://netsendo.com/wp-content/uploads/2021/06/07.png" width="42" height="41" alt=""></a></td>
+			<a id="ig-output" href="http://instagram.com"><img src="https://netsendo.com/wp-content/uploads/2021/06/07.png" width="42" height="41" alt=""></a></td>
 		<td>
-			<a id="li-link-output" href="http://linkedin.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/08.png" width="62" height="41" alt=""></a></td>
+			<a id="li-output" href="http://linkedin.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/08.png" width="62" height="41" alt=""></a></td>
 		<td rowspan="2">
 			<ul style="list-style-type: none; font-size: 14px; display: flex; flex-wrap: wrap; color: grey; padding: 0 0 0 10px;">
 				<li style="width: 100%;"><span style="font-weight: bold;">tel: </span> <span id="phone-output">123 123 123</span> </li></br>
@@ -69,7 +87,7 @@
 	</tr>
 	<tr>
 		<td colspan="6">
-			<p style="color: #5d2772; font-size: 13px; text-align: center;" id="bottom-text-output">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?</p></td>
+			<p style="color: #5d2772; font-size: 13px; text-align: center;" id="bottom-output">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?</p></td>
 	</tr>
 </table>
 

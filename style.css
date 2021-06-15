@@ -24,7 +24,6 @@ input,
 #bottom-text {
     width: 80%;
     background-color: transparent;
-    
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
@@ -52,6 +51,7 @@ input:focus {
 }
 label {
     width: 100%;
+    justify-self: flex-start;
 }
 
 #code {
@@ -73,8 +73,17 @@ table {
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
+    margin-left: -50px;
 }
 
 .icon-container:hover {
     background-color: rgb(196, 196, 196);
 } 
+
+.label-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
