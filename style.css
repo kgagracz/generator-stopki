@@ -53,6 +53,10 @@ label {
     width: 100%;
 }
 
+#code {
+    margin: 50px;
+}
+
 table {
     box-shadow:  20px 20px 60px #d9d9d9,
     -20px -20px 60px #ffffff;
