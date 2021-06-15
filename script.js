@@ -73,7 +73,7 @@ function removeNonDisplayed() {
 //opening typography 
 const nameTypographyOpen = document.getElementById('name-typography-open')
 nameTypographyOpen.addEventListener('click', function() {
-    typographyPopup.style.display = 'block';
+    typographyPopup.style.display = 'flex';
 })
 //closing typography
 const closeTypography = document.getElementById('close-typography');
