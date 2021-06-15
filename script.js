@@ -1,30 +1,25 @@
-let nameInput = document.getElementById('name');
-let nameOutput = document.getElementById('name-output');
+const nameInput = document.getElementById('name');
+const nameOutput = document.getElementById('name-output');
+const positionInput = document.getElementById('position');
+const positionOutput = document.getElementById('position-output');
+const phoneInput = document.getElementById('phone');
+const phoneOutput = document.getElementById('phone-output');
+const emailInput = document.getElementById('email');
+const emailOutput = document.getElementById('email-output');
+const imgUrlInput = document.getElementById('image-url');
+const imgUrlOutput = document.getElementById('image-url-output');
+const fbLinkInput = document.getElementById('fb-link');
+const fbLinkOutput = document.getElementById('fb-link-output');
+const igLinkInput = document.getElementById('ig-link');
+const igLinkOutput = document.getElementById('ig-link-output');
+const liLinkInput = document.getElementById('li-link');
+const liLinkOutput = document.getElementById('li-link-output');
+const bottomTextInput = document.getElementById('bottom-text');
+const bottomTextOutput = document.getElementById('bottom-text-output')
+const submitButton = document.getElementById('submit');
+const codeOutput = document.getElementById('code');
 
-let positionInput = document.getElementById('position');
-let positionOutput = document.getElementById('position-output');
 
-let phoneInput = document.getElementById('phone');
-let phoneOutput = document.getElementById('phone-output');
-let emailInput = document.getElementById('email');
-let emailOutput = document.getElementById('email-output');
-let imgUrlInput = document.getElementById('image-url');
-let imgUrlOutput = document.getElementById('image-url-output');
-
-let fbLinkInput = document.getElementById('fb-link');
-let fbLinkOutput = document.getElementById('fb-link-output');
-let igLinkInput = document.getElementById('ig-link');
-let igLinkOutput = document.getElementById('ig-link-output');
-let liLinkInput = document.getElementById('li-link');
-let liLinkOutput = document.getElementById('li-link-output');
-
-let bottomTextInput = document.getElementById('bottom-text');
-let bottomTextOutput = document.getElementById('bottom-text-output')
-console.log(bottomTextInput.value)
-console.log(bottomTextOutput.value)
-let submitButton = document.getElementById('submit');
-
-let codeOutput = document.getElementById('code');
 function generate() {
     nameOutput.innerHTML = nameInput.value;
     positionOutput.innerHTML = positionInput.value;
@@ -44,3 +39,17 @@ function generate() {
 }
 
 submitButton.addEventListener('click', generate);
+
+
+
+
+
+
+
+let array = [...document.getElementsByClassName('icon-container')];
+array.forEach(function(icon) {
+    icon.addEventListener('click', function() {
+        document.getElementById(icon.id+'-link-output').remove();
+    })
+})
+

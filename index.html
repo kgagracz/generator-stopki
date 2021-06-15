@@ -6,9 +6,8 @@
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body style="font-family: Montserrat;" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
@@ -18,9 +17,9 @@
 	<label for="phone">Nr telefonu</label><input type="text" id="phone" placeholder="+48 123 123 123">
 	<label for="email">Adres email</label><input type="text" id="email" placeholder="name@company.pl">
 	<label for="img-url">Adres url zdjęcia profilu</label><input type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png"> 
-	<label for="fb-link">Link do profilu Facebook</label><input type="text" id="fb-link" placeholder="https://socialmedia.pl">
-	<label for="ig-link">Link do profilu Instagram</label><input type="text" id="ig-link" placeholder="https://socialmedia.pl">
-	<label for="li-link">Link do profilu Linked In</label><input type="text" id="li-link" placeholder="https://socialmedia.pl">
+	<label for="fb-link">Link do profilu Facebook</label><input type="text" id="fb-link" placeholder="https://socialmedia.pl"><div id="fb" class="icon-container"><i  class="material-icons">remove</i></div>
+	<label for="ig-link">Link do profilu Instagram</label><input type="text" id="ig-link" placeholder="https://socialmedia.pl"><div id="ig" class="icon-container"><i  class="material-icons">remove</i></div>
+	<label for="li-link">Link do profilu Linked In</label><input type="text" id="li-link" placeholder="https://socialmedia.pl"><div id="li" class="icon-container"><i  class="material-icons">remove</i></div>
 	<label for="bottom-text">Dolny tekst</label><textarea name="bottom-text" id="bottom-text" cols="30" rows="5" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?"></textarea>
 	
 	<button id="submit">Wygeneruj</button>
@@ -38,7 +37,7 @@
 			<p id="name-output" style=" margin: 20px 0 0 10px; font-size: 28px; color: #5d2772; font-weight: bold;">Ania Kowalska</p>
 		</td>
 		<td rowspan="4">
-			<img id="image-url-output" src="https://netsendo.com/wp-content/uploads/2021/06/04.png" width="195" height="193" alt=""></td>
+			<img id="image-url-output" src="https://netsendo.com/wp-content/uploads/2021/06/04.png" width="195" height="193" alt="profil" style="object-fit:contain;"></td>
 	</tr>
 	<tr>
 		<td>
@@ -76,7 +75,6 @@
 
 
 <textarea name="code" id="code" cols="100" rows="10" placeholder="Kod HTML stopki"></textarea>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
 <script src="./script.js"></script>
 </body>
 </html>

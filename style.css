@@ -63,3 +63,18 @@ table {
     -20px -20px 60px #ffffff;
     margin: 50px;
 }
+
+.icon-container {
+    color: red;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon-container:hover {
+    background-color: rgb(196, 196, 196);
+} 
