@@ -6,6 +6,8 @@ const phoneInput = document.getElementById('phone');
 const phoneOutput = document.getElementById('phone-output');
 const emailInput = document.getElementById('email');
 const emailOutput = document.getElementById('email-output');
+const websiteInput = document.getElementById('website');
+const websiteOutput = document.getElementById('website-output');
 const imgUrlInput = document.getElementById('image-url');
 const imgUrlOutput = document.getElementById('image-output');
 const fbLinkInput = document.getElementById('fb-link');
@@ -31,6 +33,7 @@ function generate() {
     positionOutput.innerHTML = positionInput.value;
     phoneOutput.innerHTML = phoneInput.value;
     emailOutput.innerHTML = emailInput.value;
+    websiteOutput.innerHTML = websiteInput.value;
     imgUrlOutput.src = imgUrlInput.value;
     bannerOutput.src = bannerInput.value;
     bannerLinkOutput.href = bannerLinkInput.value;
@@ -66,7 +69,7 @@ function toggleElement(icon) {
         }
     })
 }
-//removing hided elements
+//removing hidden elements
 function removeNonDisplayed() {
     const nonDisplayElements = [...codeToHighlight.querySelectorAll('*')];
     nonDisplayElements.forEach(function(item) {
@@ -77,19 +80,30 @@ function removeNonDisplayed() {
     
 }
 //TYPOGRAPHY 
-//opening typography 
+const typographyPopup = document.getElementById('name-typography');
 const nameTypographyOpen = document.getElementById('name-typography-open')
+const closeTypography = document.getElementById('name-typography-close');
+const positiontypographyPopup = document.getElementById('position-typography');
+const positionTypographyOpen = document.getElementById('position-typography-open')
+const positionTypographyClose = document.getElementById('position-typography-close');
+//opening typography 
 nameTypographyOpen.addEventListener('click', function() {
     typographyPopup.style.display = 'flex';
 })
+positionTypographyOpen.addEventListener('click', function() {
+    positiontypographyPopup.style.display = 'flex';
+})
 //closing typography
-const closeTypography = document.getElementById('close-typography');
-const typographyPopup = document.getElementById('typography');
 closeTypography.addEventListener('click', function() {
     typographyPopup.style.display = 'none';
 })
-const typographyButton = document.getElementById('name-typography');
+positionTypographyClose.addEventListener('click', function() {
+    positiontypographyPopup.style.display = 'none';
+})
+const typographyButton = document.getElementById('name-typography-button');
 typographyButton.addEventListener('click', changeTypography) 
+const positionTypographyButton = document.getElementById('position-typography-button');
+positionYypographyButton.addEventListener('click', changeTypography) 
 //change of typography
 function changeTypography() {
     const fontSizeInput = document.getElementById('font-size-input');

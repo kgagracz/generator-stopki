@@ -13,22 +13,33 @@
 
 <div id="generator">
 	<div class="label-container">
-		<label for="name">Imię i nazwisko</label><input class="form-input" type="text" id="name" placeholder="Ania Kowalska"><div id="name-typography-open" class="icon-container"><i  class="material-icons">mode</i></div>
-		<div class="popup typography" id="typography">
-			<i class="material-icons close" id="close-typography">close</i>
+		<label for="name">Imię i nazwisko</label><input class="form-input" type="text" id="name" placeholder="Ania Kowalska">
+		<div id="name-typography-open" class="icon-container"><i  class="material-icons">mode</i></div>
+		<div class="popup typography" id="name-typography">
+			<i class="material-icons close" id="name-typography-close">close</i>
 				<label class="popup-label" for="font-size">Rozmiar czcionki</label><input class="popup-input" id="font-size-input" type="number" value="28">
 				<label class="popup-label" for="font-color">Kolor czcionki</label><input class="popup-input" id="font-color-input" type="color" value="#5d2772">
-			<button class="button popup-button" id="name-typography">Zmień</button>
+			<button class="button popup-button" id="name-typography-button">Zmień</button>
 		</div>
 	</div>
 	<div class="label-container">
 		<label for="position">Stanowisko</label><input class="form-input" type="text" id="position" placeholder="Sales specialist"><div id="position" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
+		<div id="position-typography-open" class="icon-container"><i  class="material-icons">mode</i></div>
+		<div class="popup typography" id="position-typography">
+			<i class="material-icons close" id="position-typography-close">close</i>
+				<label class="popup-label" for="font-size">Rozmiar czcionki</label><input class="popup-input" id="font-size-input" type="number" value="28">
+				<label class="popup-label" for="font-color">Kolor czcionki</label><input class="popup-input" id="font-color-input" type="color" value="#5d2772">
+			<button class="button popup-button" id="position-typography-close">Zmień</button>
+		</div>
 	</div>
 	<div class="label-container">
 		<label for="phone">Nr telefonu</label><input class="form-input" type="text" id="phone" placeholder="+48 123 123 123">
 	</div>
 	<div class="label-container">
 		<label for="email">Adres email</label><input class="form-input" type="text" id="email" placeholder="name@company.pl">
+	</div>
+	<div class="label-container">
+		<label for="website">Strona internetowa</label><input class="form-input" type="text" id="website" placeholder="netsendo.pl">
 	</div>
 	<div class="label-container">
 		<label for="img-url">Adres url zdjęcia profilu</label><input class="form-input" type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png" value="https://netsendo.com/wp-content/uploads/2021/06/04.png"> <div id="image" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
@@ -43,7 +54,7 @@
 		<label for="li-link">Link do profilu Linked In</label><input class="form-input" type="text" id="li-link" placeholder="https://socialmedia.pl"><div id="li" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
 	</div>
 	<div class="label-container">
-		<label for="banner">Link url zdjęcia banera <i class="material-icons">info</i></label><input class="form-input" type="text" id="banner" placeholder="https://netsendo.com/wp-content/uploads/2021/06/11.png" value="https://netsendo.com/wp-content/uploads/2021/06/11.png"><div id="banner" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
+		<label for="banner">Link url zdjęcia banera <i class="material-icons" id="banner-info" title="Wymiary obrazu: 612x143">info</i></label><input class="form-input" type="text" id="banner" placeholder="https://netsendo.com/wp-content/uploads/2021/06/11.png" value="https://netsendo.com/wp-content/uploads/2021/06/11.png"><div id="banner" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
 	</div>
 	<div class="label-container">
 		<label for="banner">Link do którego prowadzi baner</label><input class="form-input" type="text" id="banner-link" placeholder="http://netsendo.pl"><div id="banner-link" class="icon-container remove-button">
@@ -84,7 +95,7 @@
 			<ul style="list-style-type: none; font-size: 14px; display: flex; flex-wrap: wrap; color: grey; padding: 0 0 0 10px;">
 				<li style="width: 100%;"><span style="font-weight: bold;">tel: </span> <span id="phone-output">123 123 123</span> </li></br>
 				<li style="width: 100%;"><span style="font-weight: bold;">email: </span> <span id="email-output">name@company.pl</span> </li></br>
-				<li style="width: 100%;">netsendo.pl</li></br>
+				<li style="width: 100%;" id="website-output">netsendo.pl</li></br>
 			</ul></td>
 	</tr>
 	<tr>
