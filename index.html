@@ -13,14 +13,15 @@
 <body style="font-family: Montserrat;" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
 	<div id="generator">
-	<label for="name">Imię i nazwisko</label><input type="text" id="name">
-	<label for="position">Stanowisko</label><input type="text" id="position">
-	<label for="phone">Nr telefonu</label><input type="text" id="phone">
-	<label for="email">Adres email</label><input type="text" id="email">
-	<label for="img-url">Adres url zdjęcia profilu</label><input type="text" id="image-url"> 
-	<label for="fb-link">Link do profilu Facebook</label><input type="text" id="fb-link">
-	<label for="ig-link">Link do profilu Instagram</label><input type="text" id="ig-link">
-	<label for="li-link">Link do profilu Linked In</label><input type="text" id="li-link">
+	<label for="name">Imię i nazwisko</label><input type="text" id="name" placeholder="Ania Kowalska">
+	<label for="position">Stanowisko</label><input type="text" id="position" placeholder="Sales specialist">
+	<label for="phone">Nr telefonu</label><input type="text" id="phone" placeholder="+48 123 123 123">
+	<label for="email">Adres email</label><input type="text" id="email" placeholder="name@company.pl">
+	<label for="img-url">Adres url zdjęcia profilu</label><input type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png"> 
+	<label for="fb-link">Link do profilu Facebook</label><input type="text" id="fb-link" placeholder="https://socialmedia.pl">
+	<label for="ig-link">Link do profilu Instagram</label><input type="text" id="ig-link" placeholder="https://socialmedia.pl">
+	<label for="li-link">Link do profilu Linked In</label><input type="text" id="li-link" placeholder="https://socialmedia.pl">
+	<label for="bottom-text">Dolny tekst</label><textarea name="bottom-text" id="bottom-text" cols="30" rows="10" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?"></textarea>
 	
 	<button id="submit">Wygeneruj</button>
 </div>
@@ -69,7 +70,7 @@
 	</tr>
 	<tr>
 		<td colspan="6">
-			<p style="color: #5d2772; font-size: 13px; text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?</p></td>
+			<p style="color: #5d2772; font-size: 13px; text-align: center;" id="bottom-text-output">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?</p></td>
 	</tr>
 </table>
 

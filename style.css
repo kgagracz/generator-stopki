@@ -20,7 +20,8 @@
 
 
 
-input {
+input,
+#bottom-text {
     width: 80%;
     background-color: transparent;
     

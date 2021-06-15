@@ -18,6 +18,10 @@ let igLinkOutput = document.getElementById('ig-link-output');
 let liLinkInput = document.getElementById('li-link');
 let liLinkOutput = document.getElementById('li-link-output');
 
+let bottomTextInput = document.getElementById('bottom-text');
+let bottomTextOutput = document.getElementById('bottom-text-output')
+console.log(bottomTextInput.value)
+console.log(bottomTextOutput.value)
 let submitButton = document.getElementById('submit');
 
 let codeOutput = document.getElementById('code');
@@ -30,6 +34,7 @@ function generate() {
     fbLinkOutput.href = fbLinkInput.value;
     igLinkOutput.href = igLinkInput.value;
     liLinkOutput.href = liLinkInput.value;
+    bottomTextOutput.innerHTML = bottomTextInput.value;
     
     let codeToHighlight = '';
     codeToHighlight = document.getElementById('Tabela_01').outerHTML;
