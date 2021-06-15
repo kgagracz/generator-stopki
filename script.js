@@ -46,12 +46,10 @@ submitButton.addEventListener('click', generate);
 
 
 
-let array = [...document.getElementsByClassName('icon-container')];
-array.forEach(function(icon) {
+let outputs = [...document.getElementsByClassName('icon-container')];
+outputs.forEach(function(icon) {
     icon.addEventListener('click', function() {
         document.getElementById(icon.id+'-output').remove();
-        
-
     })
 })
 
