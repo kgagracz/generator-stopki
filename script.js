@@ -30,7 +30,7 @@ function generate() {
     nameOutput.innerHTML = nameInput.value;
     positionOutput.innerHTML = positionInput.value;
     phoneOutput.innerHTML = phoneInput.value;
-    emailOutput.href = emailInput.value;
+    emailOutput.innerHTML = emailInput.value;
     imgUrlOutput.src = imgUrlInput.value;
     bannerOutput.src = bannerInput.value;
     bannerLinkOutput.href = bannerLinkInput.value;
