@@ -31,25 +31,30 @@ function generate() {
     liLinkOutput.href = liLinkInput.value;
     bottomTextOutput.innerHTML = bottomTextInput.value;
     
-    let codeToHighlight = '';
+    const codeToHighlight = '';
     codeToHighlight = document.getElementById('Tabela_01').outerHTML;
     codeOutput.innerHTML = codeToHighlight
     console.log(codeToHighlight)
-
+    
 }
-
 submitButton.addEventListener('click', generate);
 
 
+let displayed = true
+const outputs = [...document.getElementsByClassName('icon-container')];
 
+outputs.forEach(toggleElement);
 
-
-
-
-let outputs = [...document.getElementsByClassName('icon-container')];
-outputs.forEach(function(icon) {
+function toggleElement(icon) {
     icon.addEventListener('click', function() {
-        document.getElementById(icon.id+'-output').remove();
+        if (displayed) {
+            document.getElementById(icon.id+'-output').style.display = 'none';
+            displayed = false;
+            icon.querySelector('i').innerHTML = 'add';
+        } else {
+            document.getElementById(icon.id+'-output').style.display = 'block';
+            displayed = true;
+            icon.querySelector('i').innerHTML = 'remove';
+        }
     })
-})
-
+}
