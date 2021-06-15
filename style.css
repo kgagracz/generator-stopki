@@ -19,12 +19,16 @@ body {
 }
 
 .popup {
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(245, 245, 245);
     position: absolute;
     left: 400px;
+    width: 300px;
     height: 200px;
     display: flex;
+    justify-self: center;
+    align-items: center;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .popup-input {
@@ -39,10 +43,10 @@ body {
     display: block;
     text-align: center;
 }
-/* .popup-inner {
-    width: 45%;
-    padding: 10px;    
-} */
+.popup-button {
+    padding: 5px;
+    
+}
 
 .close {
     position: absolute;
@@ -63,7 +67,7 @@ body {
 input:focus {
    border: none;
 }
-#submit {
+button {
     font-size: 20px;
     border: none;
     border-radius: 50px;
@@ -73,7 +77,7 @@ input:focus {
     -20px -20px 60px #ffffff;
 }
 
-#submit:hover {
+button:hover {
     border-radius: 50px;
     background: linear-gradient(145deg, #e6e6e6, #ffffff);
     box-shadow:  20px 20px 60px #d9d9d9,

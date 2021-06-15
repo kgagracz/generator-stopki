@@ -20,7 +20,7 @@ const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
 const codeToHighlight = document.getElementById('Tabela_01');
 
-
+//generate signifiture
 function generate() {
     nameOutput.innerHTML = nameInput.value;
     positionOutput.innerHTML = positionInput.value;
@@ -38,7 +38,7 @@ function generate() {
 }
 submitButton.addEventListener('click', generate);
 
-
+//hiding elements to remove
 let displayed = true;
 const outputs = [...document.getElementsByClassName('remove-button')];
 
@@ -59,12 +59,7 @@ function toggleElement(icon) {
         }
     })
 }
-
-const nameTypographyOpen = document.getElementById('name-typography-open')
-nameTypographyOpen.addEventListener('click', function() {
-    typographyPopup.style.display = 'block'
-})
-
+//removing hided elements
 function removeNonDisplayed() {
     const nonDisplayElements = [...codeToHighlight.querySelectorAll('*')];
     nonDisplayElements.forEach(function(item) {
@@ -74,10 +69,27 @@ function removeNonDisplayed() {
     })
     
 }
-removeNonDisplayed();
-
+//TYPOGRAPHY 
+//opening typography 
+const nameTypographyOpen = document.getElementById('name-typography-open')
+nameTypographyOpen.addEventListener('click', function() {
+    typographyPopup.style.display = 'block';
+})
+//closing typography
 const closeTypography = document.getElementById('close-typography');
 const typographyPopup = document.getElementById('typography');
 closeTypography.addEventListener('click', function() {
-    typographyPopup.style.display = 'none'
+    typographyPopup.style.display = 'none';
 })
+const typographyButton = document.getElementById('name-typography');
+typographyButton.addEventListener('click', changeTypography) 
+//change of typography
+function changeTypography() {
+    const fontSizeInput = document.getElementById('font-size-input');
+    const fontColorInput = document.getElementById('font-color-input');
+    
+    nameOutput.style.fontSize = fontSizeInput.value
+    nameOutput.style.color = fontColorInput.value
+}
+
+
