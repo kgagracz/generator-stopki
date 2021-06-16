@@ -27,21 +27,30 @@ const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
 const codeToHighlight = document.getElementById('Tabela_01');
 
+const formInputs = document.getElementsByClassName('form-input');
+const formOutputs = document.querySelectorAll('[data-output-target]');
+
 //generate signifiture
 function generate() {
-    nameOutput.innerHTML = nameInput.value;
-    positionOutput.innerHTML = positionInput.value;
-    phoneOutput.innerHTML = phoneInput.value;
-    emailOutput.innerHTML = emailInput.value;
-    websiteOutput.innerHTML = websiteInput.value;
-    imgUrlOutput.src = imgUrlInput.value;
-    bannerOutput.src = bannerInput.value;
-    bannerLinkOutput.href = bannerLinkInput.value;
-    fbLinkOutput.href = fbLinkInput.value;
-    igLinkOutput.href = igLinkInput.value;
-    liLinkOutput.href = liLinkInput.value;
-    bottomTextOutput.innerHTML = bottomTextInput.value;
-    
+    // nameOutput.innerHTML = nameInput.value;
+    // positionOutput.innerHTML = positionInput.value;
+    // phoneOutput.innerHTML = phoneInput.value;
+    // emailOutput.innerHTML = emailInput.value;
+    // websiteOutput.innerHTML = websiteInput.value;
+    // imgUrlOutput.src = imgUrlInput.value;
+    // bannerOutput.src = bannerInput.value;
+    // bannerLinkOutput.href = bannerLinkInput.value;
+    // fbLinkOutput.href = fbLinkInput.value;
+    // igLinkOutput.href = igLinkInput.value;
+    // liLinkOutput.href = liLinkInput.value;
+    // bottomTextOutput.innerHTML = bottomTextInput.value;
+    formOutputs.forEach(formOutput => {
+        // formOutput.innerHTML = document.getElementById(formOutput.getAttribute('data-output-target')).value
+        console.log(document.getElementById(formOutput.getAttribute('data-output-target')))
+        formOutput.innerHTML = document.getElementById(formOutput.getAttribute('data-output-target')).value;
+    })
+
+
     codeOutput.innerHTML = codeToHighlight.outerHTML;
     console.log(codeToHighlight);
     return removeNonDisplayed();
@@ -55,7 +64,7 @@ const outputs = [...document.getElementsByClassName('remove-button')];
 outputs.forEach(toggleElement);
 
 function toggleElement(icon) {
-    icon.addEventListener('click', function() {
+    icon.addEventListener('click', () => {
         if (displayed) {
             displayed = false;
             document.getElementById(icon.id+'-output').style.display = 'none';
@@ -72,7 +81,7 @@ function toggleElement(icon) {
 //removing hidden elements
 function removeNonDisplayed() {
     const nonDisplayElements = [...codeToHighlight.querySelectorAll('*')];
-    nonDisplayElements.forEach(function(item) {
+    nonDisplayElements.forEach(item => {
         if (item.style.display === 'none') {
             item.remove();
         }
