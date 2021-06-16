@@ -18,13 +18,9 @@ function generate() {
     bannerLinkOutput.href = bannerLinkInput.value;
 
     formOutputs.forEach(formOutput => {
-        console.log(document.getElementById(formOutput.getAttribute('data-output-target')))
         formOutput.innerHTML = document.getElementById(formOutput.getAttribute('data-output-target')).value;
     })
-
-
     codeOutput.innerHTML = codeToHighlight.outerHTML;
-    console.log(codeToHighlight);
     return removeNonDisplayed();
 }
 submitButton.addEventListener('click', generate);
@@ -87,7 +83,6 @@ function changeTypography() {
             const typographyOutput = document.getElementsByClassName(changeButton.getAttribute('data-popup')+'-output');
             typographyOutput[0].style.fontSize = fontSizeInput.value; 
             typographyOutput[0].style.color = fontColorInput.value; 
-            console.log(fontColorInput.value )
         })
     })
 }
