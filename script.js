@@ -4,6 +4,13 @@ const bannerInput = document.getElementById('banner-url');
 const bannerOutput = document.getElementById('banner-url-output');
 const bannerLinkInput = document.getElementById('banner-link');
 const bannerLinkOutput = document.getElementById('banner-link-output');
+const fbLinkOutput = document.getElementById('fb-output')
+const fbInput = document.getElementById('fb-link')
+const igLinkOutput = document.getElementById('ig-output')
+const igInput = document.getElementById('ig-link')
+const liLinkOutput = document.getElementById('li-output')
+const liInput = document.getElementById('li-link')
+
 
 const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
@@ -15,6 +22,10 @@ function generate() {
     imgUrlOutput.src = imgUrlInput.value;
     bannerOutput.src = bannerInput.value;
     bannerLinkOutput.href = bannerLinkInput.value;
+    fbLinkOutput.href = fbInput.value;
+    igLinkOutput.href = igInput.value;
+    liLinkOutput.href = liInput.value;
+
 
     formOutputs.forEach(formOutput => {
         formOutput.innerHTML = document.getElementById(formOutput.getAttribute('data-output-target')).value;
@@ -23,7 +34,7 @@ function generate() {
     return removeNonDisplayed();
 }
 submitButton.addEventListener('click', generate);
-    
+
 //hiding elements to remove
 let displayed = true;
 const outputs = [...document.getElementsByClassName('remove-button')];
