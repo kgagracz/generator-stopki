@@ -9,7 +9,6 @@ const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
 const codeToHighlight = document.getElementById('Tabela_01');
 
-
 //generate signifiture
 function generate() {
     const formOutputs = document.querySelectorAll('[data-output-target]');
@@ -24,7 +23,7 @@ function generate() {
     return removeNonDisplayed();
 }
 submitButton.addEventListener('click', generate);
-
+    
 //hiding elements to remove
 let displayed = true;
 const outputs = [...document.getElementsByClassName('remove-button')];
@@ -54,7 +53,6 @@ function removeNonDisplayed() {
             item.remove();
         }
     })
-    
 }
 // //TYPOGRAPHY 
 const typographyPopups = [...document.getElementsByClassName('typography')];

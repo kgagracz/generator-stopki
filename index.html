@@ -54,7 +54,7 @@
 		<label for="li-link">Link do profilu Linked In</label><input class="form-input" type="text" id="li-link" placeholder="https://socialmedia.pl"><div id="li" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
 	</div>
 	<div class="label-container">
-		<label for="banner-url">Link url zdjęcia banera <i class="material-icons" id="banner-info" title="Wymiary obrazu: 612x143">info</i></label><input class="form-input" type="text" id="banner-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/11.png" value="https://netsendo.com/wp-content/uploads/2021/06/11.png"><div id="banner" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
+		<label for="banner-url">Link url zdjęcia banera <i class="material-icons" id="banner-info" title="Wymiary obrazu: 600x111">info</i></label><input class="form-input" type="text" id="banner-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/11.png" value="https://netsendo.com/wp-content/uploads/2021/06/11.png"><div id="banner" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
 	</div>
 	<div class="label-container">
 		<label for="banner">Link do którego prowadzi baner</label><input class="form-input" type="text" id="banner-link" placeholder="http://netsendo.pl"><div id="banner-link" class="icon-container remove-button">
@@ -64,56 +64,45 @@
 	</div>
 	
 	<button id="submit">Wygeneruj</button>
-</div>
-</div>
+</div></div>
 
-
-<table id="Tabela_01" style="font-family: Montserrat;" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" width="612" height="386" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td colspan="3" rowspan="2">
-			<a href="http://netsendo.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/01.png" width="159" height="101" alt=""></a></td>
-		<td rowspan="4">
-			<img  src="https://netsendo.com/wp-content/uploads/2021/06/02.png" width="22" height="193" alt=""></td>
-		<td style="display: flex;">
-			<p id="name-output" class="name-typography-output" data-output-target="name" style=" margin: 20px 0 0 10px; font-size: 28px; color: #5d2772; font-weight: bold;">Ania Kowalska</p>
-		</td>
-		<td rowspan="4">
-			<img id="image-output" src="https://netsendo.com/wp-content/uploads/2021/06/04.png" width="195" height="193" alt="profil" style="object-fit:contain;"></td>
-	</tr>
-	<tr>
-		<td>
-			<p id="position-output" data-output-target="position" class="position-typography-output" style="color:#cae01c; margin: 0 0 0 10px; font-style: italic; font-size: 25px;">Sales specialist</p></td>
-	</tr>
-	<tr>
-		<td>
-			<a style="padding-left: 10px;" id="fb-output" href="http://facebook.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/facebook.png" width="30" height="30" alt=""></a></td>
-		<td>
-			<a style="padding-left: 10px;" id="ig-output" href="http://instagram.com"><img src="https://netsendo.com/wp-content/uploads/2021/06/instagram.png" width="30" height="30" alt=""></a></td>
-		<td>
-			<a style="padding-left: 10px;" id="li-output" href="http://linkedin.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/linkedin.png" width="30" height="30" alt=""></a></td>
-		<td rowspan="2">
-			<ul style="list-style-type: none; font-size: 14px; display: flex; flex-wrap: wrap; color: grey; padding: 0 0 0 10px;">
-				<li style="width: 100%;"><span style="font-weight: bold;">tel: </span> <span id="phone-output" data-output-target="phone">123 123 123</span> </li></br>
-				<li style="width: 100%;"><span style="font-weight: bold;">email: </span> <span id="email-output" data-output-target="email">name@company.pl</span> </li></br>
+<div class="table-container">
+	
+	<table id="Tabela_01" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" width="600" cellpadding="0" cellspacing="0">
+		<tr>
+			<td colspan="3" style="display: flex; justify-content: center; align-items: center;"><img id="image-output" src="https://netsendo.com/wp-content/uploads/2021/06/julia-dylag.png" widtd="150" height="150" alt="profil" style="object-fit:contain;"></td>
+			<td rowspan="3" style=" padding: 30px;"><p id="name-output" class="name-typography-output" data-output-target="name" style=" margin: 20px 0 0 10px; font-size: 28px; color: #5d2772; font-weight: bold;">Ania Kowalska</p>
+				<div style="position: absolute; border: 1px solid grey; height: 150px; margin: -40px 0 0 0;"></div>
+			  <p id="position-output" data-output-target="position" class="position-typography-output" style="color:#cae01c; margin: 0 0 0 10px; font-style: italic; font-size: 25px;">Sales specialist</p>
+			  <ul style="list-style-type: none; font-size: 14px; display: flex; flex-wrap: wrap; color: grey; padding: 0 0 0 10px;">
+				<li style="width: 100%;"><span style="font-weight: bold;">tel: </span> <span id="phone-output" data-output-target="phone">123 123 123</span> </li>
+				<li style="width: 100%;"><span style="font-weight: bold;">email: </span> <span id="email-output" data-output-target="email">name@company.pl</span> </li>
 				<li style="width: 100%;" id="website-output" data-output-target="website">netsendo.pl</li></br>
 			</ul></td>
-	</tr>
-	<tr>
-		<td colspan="3">
-			<img src="https://netsendo.com/wp-content/uploads/2021/06/10.png" width="159" height="51" alt=""></td>
-	</tr>
-	<tr>
-		<td colspan="6">
-			<a id="banner-link-output" href="http://netsendo.pl"><img id="banner-url-output" src="https://netsendo.com/wp-content/uploads/2021/06/11.png" width="612" height="143" alt=""></a></td>
-	</tr>
-	<tr>
-		<td colspan="6">
-			<p style="color: #5d2772; font-size: 13px; text-align: center;" id="bottom-output" data-output-target="bottom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?</p></td>
-	</tr>
-</table>
+	
+		</tr>
+		<tr>
+			<td colspan="3" style="display: flex; justify-content: center; align-items: center; padding: 10px 0 0 0 ;"><a href="http://netsendo.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/favi2.png " alt="logo"></a></td>
+		  </tr>
+	  <tr style="display: flex; justify-content: center; align-items:center; padding: 15px;">
+		<td><a style="padding-left: 10px;" id="fb-output" href="http://facebook.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/facebook.png" widtd="30" height="30" alt=""></a></td>
+		<td><a style="padding-left: 10px;" id="ig-output" href="http://instagram.com"><img src="https://netsendo.com/wp-content/uploads/2021/06/instagram.png" widtd="30" height="30" alt=""></a></td>
+		<td><a style="padding-left: 10px;" id="li-output" href="http://linkedin.pl"><img src="https://netsendo.com/wp-content/uploads/2021/06/linkedin.png" widtd="30" height="30" alt=""></a></td>
+		
+	  </tr>
+	  <tr>
+		<td colspan="7"><a id="banner-link-output" href="http://netsendo.pl"><img id="banner-url-output" src="https://netsendo.com/wp-content/uploads/2021/06/netsendo-wyzszy-poziom-sprzedazy.jpg" widtd="600px" height="110" alt="baner"></a></td>
+	  </tr>
+	  <tr>
+		<td colspan="7"><p style="color: #5d2772; font-size: 13px; text-align: center; padding: 3px;" id="bottom-output" data-output-target="bottom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?</p></td>
+	  </tr>
+	</table>
+	
+	
+	<textarea name="code" id="code" cols="100" rows="10" placeholder="Kod HTML stopki"></textarea>
+</div>
 
 
-<textarea name="code" id="code" cols="100" rows="10" placeholder="Kod HTML stopki"></textarea>
 <script src="./script.js"></script>
 </body>
 </html>
