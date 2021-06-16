@@ -1,51 +1,23 @@
-const nameInput = document.getElementById('name');
-const nameOutput = document.getElementById('name-output');
-const positionInput = document.getElementById('position');
-const positionOutput = document.getElementById('position-output');
-const phoneInput = document.getElementById('phone');
-const phoneOutput = document.getElementById('phone-output');
-const emailInput = document.getElementById('email');
-const emailOutput = document.getElementById('email-output');
-const websiteInput = document.getElementById('website');
-const websiteOutput = document.getElementById('website-output');
 const imgUrlInput = document.getElementById('image-url');
 const imgUrlOutput = document.getElementById('image-output');
-const fbLinkInput = document.getElementById('fb-link');
-const fbLinkOutput = document.getElementById('fb-output');
-const igLinkInput = document.getElementById('ig-link');
-const igLinkOutput = document.getElementById('ig-output');
-const liLinkInput = document.getElementById('li-link');
-const liLinkOutput = document.getElementById('li-output');
-const bannerInput = document.getElementById('banner');
-const bannerOutput = document.getElementById('banner-output');
+const bannerInput = document.getElementById('banner-url');
+const bannerOutput = document.getElementById('banner-url-output');
 const bannerLinkInput = document.getElementById('banner-link');
 const bannerLinkOutput = document.getElementById('banner-link-output');
 
-const bottomTextInput = document.getElementById('bottom-text');
-const bottomTextOutput = document.getElementById('bottom-output')
 const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
 const codeToHighlight = document.getElementById('Tabela_01');
 
-const formInputs = document.getElementsByClassName('form-input');
-const formOutputs = document.querySelectorAll('[data-output-target]');
 
 //generate signifiture
 function generate() {
-    // nameOutput.innerHTML = nameInput.value;
-    // positionOutput.innerHTML = positionInput.value;
-    // phoneOutput.innerHTML = phoneInput.value;
-    // emailOutput.innerHTML = emailInput.value;
-    // websiteOutput.innerHTML = websiteInput.value;
-    // imgUrlOutput.src = imgUrlInput.value;
-    // bannerOutput.src = bannerInput.value;
-    // bannerLinkOutput.href = bannerLinkInput.value;
-    // fbLinkOutput.href = fbLinkInput.value;
-    // igLinkOutput.href = igLinkInput.value;
-    // liLinkOutput.href = liLinkInput.value;
-    // bottomTextOutput.innerHTML = bottomTextInput.value;
+    const formOutputs = document.querySelectorAll('[data-output-target]');
+    imgUrlOutput.src = imgUrlInput.value;
+    bannerOutput.src = bannerInput.value;
+    bannerLinkOutput.href = bannerLinkInput.value;
+
     formOutputs.forEach(formOutput => {
-        // formOutput.innerHTML = document.getElementById(formOutput.getAttribute('data-output-target')).value
         console.log(document.getElementById(formOutput.getAttribute('data-output-target')))
         formOutput.innerHTML = document.getElementById(formOutput.getAttribute('data-output-target')).value;
     })
