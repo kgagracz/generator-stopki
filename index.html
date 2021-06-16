@@ -14,22 +14,22 @@
 <div id="generator">
 	<div class="label-container">
 		<label for="name">Imię i nazwisko</label><input class="form-input" type="text" id="name" placeholder="Ania Kowalska">
-		<div id="name-typography-open" class="icon-container"><i  class="material-icons">mode</i></div>
+		<div id="name-typography-open" class="typography-open icon-container" data-popup='name-typography'><i  class="material-icons">mode</i></div>
 		<div class="popup typography" id="name-typography">
-			<i class="material-icons close" id="name-typography-close">close</i>
-				<label class="popup-label" for="font-size">Rozmiar czcionki</label><input class="popup-input" id="font-size-input" type="number" value="28">
-				<label class="popup-label" for="font-color">Kolor czcionki</label><input class="popup-input" id="font-color-input" type="color" value="#5d2772">
-			<button class="button popup-button" id="name-typography-button">Zmień</button>
+			<i class="material-icons typography-close" id="name-typography-close" data-popup="name-typography">close</i>
+				<label class="popup-label" for="name-typography-font-size">Rozmiar czcionki</label><input class="popup-input" id="name-typography-font-size" type="number" value="28">
+				<label class="popup-label" for="name-typography-font-color">Kolor czcionki</label><input class="popup-input" id="name-typography-font-color" type="color" value="#5d2772">
+			<button class="button popup-button" id="name-typography-button" data-popup="name-typography">Zmień</button>
 		</div>
 	</div>
 	<div class="label-container">
 		<label for="position">Stanowisko</label><input class="form-input" type="text" id="position" placeholder="Sales specialist"><div id="position" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
-		<div id="position-typography-open" class="icon-container"><i  class="material-icons">mode</i></div>
+		<div id="position-typography-open" class="typography-open icon-container" data-popup='position-typography'><i  class="material-icons">mode</i></div>
 		<div class="popup typography" id="position-typography">
-			<i class="material-icons close" id="position-typography-close">close</i>
-				<label class="popup-label" for="font-size">Rozmiar czcionki</label><input class="popup-input" id="font-size-input" type="number" value="28">
-				<label class="popup-label" for="font-color">Kolor czcionki</label><input class="popup-input" id="font-color-input" type="color" value="#5d2772">
-			<button class="button popup-button" id="position-typography-close">Zmień</button>
+			<i class="material-icons typography-close" id="position-typography-close" data-popup="position-typography">close</i>
+				<label class="popup-label" for="position-typography-font-size">Rozmiar czcionki</label><input class="popup-input" id="position-typography-font-size" type="number" value="25">
+				<label class="popup-label" for="position-typography-font-color">Kolor czcionki</label><input class="popup-input" id="position-typography-font-color" type="color" value="#cae01c">
+			<button class="button popup-button" id="position-typography-button" data-popup="position-typography">Zmień</button>
 		</div>
 	</div>
 	<div class="label-container">
@@ -75,14 +75,14 @@
 		<td rowspan="4">
 			<img  src="https://netsendo.com/wp-content/uploads/2021/06/02.png" width="22" height="193" alt=""></td>
 		<td style="display: flex;">
-			<p id="name-output" style=" margin: 20px 0 0 10px; font-size: 28px; color: #5d2772; font-weight: bold;">Ania Kowalska</p>
+			<p id="name-output" class="name-typography-output" style=" margin: 20px 0 0 10px; font-size: 28px; color: #5d2772; font-weight: bold;">Ania Kowalska</p>
 		</td>
 		<td rowspan="4">
 			<img id="image-output" src="https://netsendo.com/wp-content/uploads/2021/06/04.png" width="195" height="193" alt="profil" style="object-fit:contain;"></td>
 	</tr>
 	<tr>
 		<td>
-			<p id="position-output" style="color:#cae01c; margin: 0 0 0 10px; font-style: italic; font-size: 25px;">Sales specialist</p></td>
+			<p id="position-output" class="position-typography-output" style="color:#cae01c; margin: 0 0 0 10px; font-style: italic; font-size: 25px;">Sales specialist</p></td>
 	</tr>
 	<tr>
 		<td>

@@ -79,38 +79,37 @@ function removeNonDisplayed() {
     })
     
 }
-//TYPOGRAPHY 
-const typographyPopup = document.getElementById('name-typography');
-const nameTypographyOpen = document.getElementById('name-typography-open')
-const closeTypography = document.getElementById('name-typography-close');
-const positiontypographyPopup = document.getElementById('position-typography');
-const positionTypographyOpen = document.getElementById('position-typography-open')
-const positionTypographyClose = document.getElementById('position-typography-close');
-//opening typography 
-nameTypographyOpen.addEventListener('click', function() {
-    typographyPopup.style.display = 'flex';
-})
-positionTypographyOpen.addEventListener('click', function() {
-    positiontypographyPopup.style.display = 'flex';
-})
-//closing typography
-closeTypography.addEventListener('click', function() {
-    typographyPopup.style.display = 'none';
-})
-positionTypographyClose.addEventListener('click', function() {
-    positiontypographyPopup.style.display = 'none';
-})
-const typographyButton = document.getElementById('name-typography-button');
-typographyButton.addEventListener('click', changeTypography) 
-const positionTypographyButton = document.getElementById('position-typography-button');
-positionYypographyButton.addEventListener('click', changeTypography) 
-//change of typography
-function changeTypography() {
-    const fontSizeInput = document.getElementById('font-size-input');
-    const fontColorInput = document.getElementById('font-color-input');
-    
-    nameOutput.style.fontSize = fontSizeInput.value
-    nameOutput.style.color = fontColorInput.value
+// //TYPOGRAPHY 
+const typographyPopups = [...document.getElementsByClassName('typography')];
+const openButtons = [...document.getElementsByClassName('typography-open')];
+const closeButtons = [...document.getElementsByClassName('typography-close')];
+const changeButtons = [...document.getElementsByClassName('popup-button')];
+
+function toggleTypography() {
+    openButtons.forEach(openButton => {
+        openButton.addEventListener('click', () => {
+            document.getElementById(openButton.getAttribute('data-popup')).style.display = 'flex'
+        })    
+    closeButtons.forEach(closeButton => {
+        closeButton.addEventListener('click', () => {
+            document.getElementById(closeButton.getAttribute('data-popup')).style.display = 'none';
+            })
+        })
+    })
 }
 
+function changeTypography() {
+    changeButtons.forEach(changeButton => {
+        changeButton.addEventListener('click', () => {
+            const fontSizeInput = document.getElementById(changeButton.getAttribute('data-popup')+'-font-size');
+            const fontColorInput = document.getElementById(changeButton.getAttribute('data-popup')+'-font-color');
+            const typographyOutput = document.getElementsByClassName(changeButton.getAttribute('data-popup')+'-output');
+            typographyOutput[0].style.fontSize = fontSizeInput.value; 
+            typographyOutput[0].style.color = fontColorInput.value; 
+            console.log(fontColorInput.value )
+        })
+    })
+}
 
+toggleTypography();
+changeTypography();
