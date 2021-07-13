@@ -9,6 +9,11 @@ a {
   color: black;
 }
 
+.left {
+  display: flex;
+  width: 50%;
+}
+
 #generator {
   width: 600px;
   height: 150vh;
@@ -23,7 +28,7 @@ a {
   position: relative;
 }
 
-.switch-teme-container {
+.switch-theme-container {
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
@@ -126,6 +131,12 @@ label {
   margin: 50px;
 }
 
+.table-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 table {
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
   margin: 50px;
@@ -153,5 +164,13 @@ table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+}
+
+.code-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
