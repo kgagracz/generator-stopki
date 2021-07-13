@@ -1,20 +1,31 @@
+const nameOutput = document.getElementById('name-output');
+const positionOutput = document.getElementById('position-output');
+const phoneOutput = document.getElementById('phone-output');
+const emailOutput = document.getElementById('email-output');
+const websiteOutput = document.getElementById('website-output');
 const imgUrlInput = document.getElementById('image-url');
 const imgUrlOutput = document.getElementById('image-output');
 const bannerInput = document.getElementById('banner-url');
 const bannerOutput = document.getElementById('banner-url-output');
 const bannerLinkInput = document.getElementById('banner-link');
 const bannerLinkOutput = document.getElementById('banner-link-output');
-const fbLinkOutput = document.getElementById('fb-output')
-const fbInput = document.getElementById('fb-link')
-const igLinkOutput = document.getElementById('ig-output')
-const igInput = document.getElementById('ig-link')
-const liLinkOutput = document.getElementById('li-output')
-const liInput = document.getElementById('li-link')
+const fbLinkOutput = document.getElementById('fb-output');
+const fbInput = document.getElementById('fb-link');
+const igLinkOutput = document.getElementById('ig-output');
+const igInput = document.getElementById('ig-link');
+const liLinkOutput = document.getElementById('li-output');
+const liInput = document.getElementById('li-link');
 
 
 const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
 const codeToHighlight = document.getElementById('Tabela_01');
+
+//setting theme switcher width
+const themeSwitchButton = [...document.getElementsByClassName('switch-theme')];
+themeSwitchButton.forEach(item => {
+    item.style.width= 100/themeSwitchButton.length +'%';
+})
 
 //generate signifiture
 function generate() {
@@ -98,3 +109,12 @@ function changeTypography() {
 
 toggleTypography();
 changeTypography();
+
+// copying code to clipboard
+const copyCodeButton = document.getElementById('copy-code');
+const copyCode = () => {
+    document.getElementById('code').select();
+    document.execCommand('copy');
+    console.log('skopiowano');
+}
+copyCodeButton.addEventListener('click', copyCode);
