@@ -34,7 +34,7 @@
             <div id="position-typography-open" class="typography-open icon-container" data-popup='position-typography'><i  class="material-icons">mode</i></div>
             <div class="popup typography" id="position-typography">
                 <i class="material-icons typography-close" id="position-typography-close" data-popup="position-typography">close</i>
-                    <label class="popup-label" for="position-typography-font-size">Rozmiar czcionki</label><input class="popup-input" id="position-typography-font-size" type="number" value="25">
+                    <label class="popup-label" for="position-typography-font-size">Rozmiar czcionki</label><input class="popup-input" id="position-typography-font-size" type="number" value="18">
                     <label class="popup-label" for="position-typography-font-color">Kolor czcionki</label><input class="popup-input" id="position-typography-font-color" type="color" value="#41B8FE">
                 <button class="button popup-button" id="position-typography-button" data-popup="position-typography">Zmień</button>
             </div>
@@ -46,7 +46,7 @@
             <label for="email">Adres email</label><input class="form-input" type="text" id="email" placeholder="name@business-dreams.com">
         </div>
         <div class="label-container">
-            <label for="img-url">Adres url zdjęcia profilu</label><input class="form-input" type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png" value="https://scontent-waw1-1.xx.fbcdn.net/v/t1.6435-9/117944917_1436068929914557_8916547493599727578_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=M0RO2XqXTtoAX94amx6&_nc_ht=scontent-waw1-1.xx&oh=7d687d9f3e2df454dc819e8d0b62b530&oe=60F29D83"> <div id="image" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
+            <label for="img-url">Adres url zdjęcia profilu</label><input class="form-input" type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png" > <div id="image" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
         </div>
         <div class="label-container">
             <label for="fb-link">Link do profilu Facebook</label><input class="form-input" type="text" id="fb-link" placeholder="https://socialmedia.pl"><div id="fb" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
@@ -58,7 +58,7 @@
             <label for="li-link">Link do profilu Linked In</label><input class="form-input" type="text" id="li-link" placeholder="https://socialmedia.pl"><div id="li" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
         </div>
         <div class="label-container">
-            <label for="banner-url">Link url zdjęcia banera <i class="material-icons" id="banner-info" title="Wymiary obrazu: 600x111">info</i></label><input class="form-input" type="text" id="banner-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/11.png" value="https://netsendo.com/wp-content/uploads/2021/06/netsendo-wyzszy-poziom-sprzedazy.jpg"><div id="banner-link" class="icon-container remove-button"><i class="material-icons">remove</i></div>
+            <label for="banner-url">Link url zdjęcia banera <i class="material-icons" id="banner-info" title="Wymiary obrazu: 600x111">info</i></label><input class="form-input" type="text" id="banner-url" placeholder="http://stopka.ec-at.com/img/bd-banner.jpg"><div id="banner-link" class="icon-container remove-button"><i class="material-icons">remove</i></div>
         </div>
         <div class="label-container">
             <label for="banner">Link do którego prowadzi baner</label><input class="form-input" type="text" id="banner-link" placeholder="http://ec-at.com">
@@ -82,7 +82,7 @@
                 <td rowspan="3" style=" padding: 0;">
                     <a style="margin: 10px; padding: 0;" href="http://netsendo.pl" ><img style="margin: 10px 0" src="http://stopka.ec-at.com/img/bd-logo.png" alt="logo" height="30px"></a>
                     <p id="name-output" class="name-typography-output" data-output-target="name" style="margin: 0 10px; font-size: 28px; color: #29225C; font-weight: bold;">Ania Kowalska</p>
-                    <p id="position-output" data-output-target="position" class="position-typography-output" style="color:#41B8FE; margin: 0 0 0 10px; font-style: italic; font-size: 25px;">Sales specialist</p>
+                    <p id="position-output" data-output-target="position" class="position-typography-output" style="color:#41B8FE; margin: 0 0 0 10px; font-style: italic; font-size: 18px;">Sales specialist</p>
                     <ul style="list-style-type: none; font-size: 14px; color: grey; padding: 0 0 0 10px; margin: 10px 0 0 0;">
                         <li style="width: 100%; margin: 0; padding: 0;"><span style="font-weight: bold;">tel: </span> <span id="phone-output" data-output-target="phone">+48 123 123 123</span> </li>
                         <li style="width: 100%; margin: 0 0 10px 0; padding: 0;"><span style="font-weight: bold;">email: </span> <span id="email-output" data-output-target="email">name@business-dreams.pl</span> </li>
@@ -98,7 +98,7 @@
                 <td colspan="3" style="display: flex; justify-content: center; align-items: center; padding: 10px 0 0 0 ;"></td>
             </tr>
           <tr>
-            <td colspan="7"><a id="banner-link-output" href="http://netsendo.pl"><img id="banner-url-output" src="https://netsendo.com/wp-content/uploads/2021/06/netsendo-wyzszy-poziom-sprzedazy.jpg" width="600px" height="110" alt="baner"></a></td>
+            <td colspan="7"><a id="banner-link-output" href=""><img id="banner-url-output" src="http://stopka.ec-at.com/img/bd-banner.jpg" width="600px" height="110" alt="baner"></a></td>
           </tr>
           <tr>
             <td colspan="7"><p style="color: #29225C; font-size: 13px; text-align: center; padding: 3px;" id="bottom-output" data-output-target="bottom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, at tenetur aliquam voluptatum ipsam reprehenderit officiis voluptate assumenda iste. Molestiae optio ipsam porro repellendus nam labore laboriosam dicta beatae ducimus?</p></td>

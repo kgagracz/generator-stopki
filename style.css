@@ -43,24 +43,25 @@ a {
 .switch-theme-container {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: center;
   width: 100%;
   padding: 0 0 20px 0;
   top: 0;
 }
 
 .switch-theme {
+  width: 25%;
   background-color: var(--main-color);
   display: inline;
   border-radius: 50px;
-  font-size: 20px;
+  font-size: 15px;
   border: none;
-  padding: 5px;
-  width: 25%;
+  padding: 10px 10px;
   text-align: center;
   height: 100%;
   transition: all .2s;
   color: white;
-  margin: 10px;
+  margin: 15px 5px;
   box-shadow: 0 0 60px #eaeaea,
               -20px -20px 60px #fff;
 }
@@ -166,6 +167,7 @@ label {
 
 #code {
   margin: 50px;
+  height: 50px;
 }
 
 .table-container {

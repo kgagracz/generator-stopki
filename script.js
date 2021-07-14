@@ -21,12 +21,6 @@ const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
 const codeToHighlight = document.getElementById('Tabela_01');
 
-//setting theme switcher width
-const themeSwitchButton = [...document.getElementsByClassName('switch-theme')];
-themeSwitchButton.forEach(item => {
-    item.style.width= 100/themeSwitchButton.length +'%';
-})
-
 //generate signifiture
 function generate() {
     const formOutputs = document.querySelectorAll('[data-output-target]');
