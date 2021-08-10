@@ -13,9 +13,10 @@
 <div class="left">
 
     <div id="generator">
+        <h1>Wybierz motyw</h1>
         <div class="switch-theme-container">
 			<a href="./index.html" id="netsendo" class="switch-theme">Netsendo</a>
-			<a href="./ecat.html" id="ecat" class="switch-theme">EC-AT</a>
+			<a href="./ecat.html" id="ecat" class="theme-switcher-active">EC-AT</a>
 			<a href="./aderlo.html" id="aderlo" class="switch-theme">Aderlo</a>
 			<a href="./bd.html" id="bd" class="switch-theme">BD</a>
         </div>
@@ -46,16 +47,23 @@
             <label for="email">Adres email</label><input class="form-input" type="text" id="email" placeholder="name@ec-at.com">
         </div>
         <div class="label-container">
-            <label for="website">Strona internetowa</label><input class="form-input" type="text" id="website" placeholder="ec-at.com" value="ec-at.com">
+            <label for="website">Strona internetowa</label><input class="form-input" type="text" id="website" placeholder="www.ec-at.com" value="www.ec-at.com">
         </div>
         <div class="label-container">
-            <label for="img-url">Adres url zdjęcia profilu</label><input class="form-input" type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png" > <div id="image" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
+			<label for="sex">Płeć</label>
+			<select name="sex" id="sex">
+				<option id="man" value="woman">Kobieta</option>
+				<option id="woman" value="man">Mężczyzna</option>
+			</select>
+		</div>
+        <div class="label-container">
+            <label for="img-url">Adres url zdjęcia profilu <i class="material-icons" id="sex-info" title="Jeżeli nie dodasz adresu zdjęcia, dodany zostanie awatar na podstawie płci">info</i></label><input class="form-input" type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png" > <div id="image" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
         </div>
         <div class="label-container">
-            <label for="fb-link">Link do profilu Facebook</label><input class="form-input" type="text" id="fb-link" placeholder="https://socialmedia.pl"><div id="fb" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
+            <label for="fb-link">Link do profilu Facebook</label><input value="https://www.facebook.com/ecatOfficial" class="form-input" type="text" id="fb-link" placeholder="https://socialmedia.pl"><div id="fb" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
         </div>
         <div class="label-container">
-            <label for="ig-link">Link do profilu Instagram</label><input class="form-input" type="text" id="ig-link" placeholder="https://socialmedia.pl"><div id="ig" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
+            <label for="ig-link">Link do profilu Instagram</label><input value="https://www.instagram.com/ecat_ecommerce_automation/" class="form-input" type="text" id="ig-link" placeholder="https://socialmedia.pl"><div id="ig" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
         </div>
         <div class="label-container">
             <label for="li-link">Link do profilu Linked In</label><input class="form-input" type="text" id="li-link" placeholder="https://socialmedia.pl"><div id="li" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
@@ -78,22 +86,26 @@
     <div class="table-container">
         
         <table id="Tabela_01" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" width="600" cellpadding="0" cellspacing="0">
+            
+            <style>
+                </style>
+            
             <tr style="display: flex; align-items: center;">
-                <td colspan="3" style="display: flex; justify-content: center; align-items: center; width: 35%;">
-                    <img id="image-output" src="https://netsendo.com/wp-content/uploads/2021/06/julia-dylag.png" widtd="150" height="150" alt="profil" style="object-fit:contain;">
+                <td colspan="3" style=" width: 170px;">
+                    <img id="image-output" src="https://netsendo.com/wp-content/uploads/2021/06/julia-dylag.png" width="150" height="150" alt="profil" style="object-fit:contain; border-radius: 50%;">
                 </td>
-                <td rowspan="3" style=" padding: 0;">
+                <td rowspan="3" style=" padding: 0; width: 60%;">
                     <a style="margin: 10px; padding: 0;" href="http://netsendo.pl" ><img style="margin: 10px 0" src="https://ec-at.com/wp-content/uploads/2020/10/logo_footer_mail.png" alt="logo" height="20px"></a>
                     <p id="name-output" class="name-typography-output" data-output-target="name" style="margin: 0 10px; font-size: 28px; color: #0E1A32; font-weight: bold;">Ania Kowalska</p>
-                    <p id="position-output" data-output-target="position" class="position-typography-output" style="color:#0563F9; margin: 0 0 0 10px; font-style: italic; font-size: 18px;">Sales specialist</p>
+                    <p id="position-output" data-output-target="position" class="position-typography-output" style="color:#0563F9; margin: 0 0 0 10px; font-style: italic; font-size: 18px;">Specialista ds. sprzedaży</p>
                     <ul style="list-style-type: none; font-size: 14px; color: grey; padding: 0 0 0 10px; margin: 10px 0 0 0;">
                         <li style="width: 100%; margin: 0; padding: 0;"><span style="font-weight: bold;">tel: </span> <span id="phone-output" data-output-target="phone">+48 123 123 123</span> </li>
                         <li style="width: 100%; margin: 0; padding: 0;"><span style="font-weight: bold;">email: </span> <span id="email-output" data-output-target="email">name@ec-at.com</span> </li>
-                        <li style="width: 100%; margin: 0; padding: 0;" id="website-output" data-output-target="website"><a style="text-decoration: none;">ec-at.com</a></li></br>
+                        <li style="width: 100%; margin: 0; padding: 0;" id="website-output" data-output-target="website"><a style="text-decoration: none;">www.ec-at.com</a></li></br>
                     </ul>
-                    <a style="padding-left: 10px;" id="fb-output" href="http://facebook.pl"><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/fb.png" widtd="20" height="20" alt=""></a>
-                    <a style="padding-left: 10px;" id="ig-output" href="http://instagram.com"><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/ig.png" widtd="21" height="21" alt=""></a>
-                    <a style="padding-left: 10px;" id="li-output" href="http://linkedin.pl"><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/in.png" widtd="20" height="20" alt=""></a>
+                    <a style="padding-left: 10px;" id="fb-output" href=""><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/fb.png" widtd="20" height="20" alt=""></a>
+                    <a style="padding-left: 10px;" id="ig-output" href=""><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/ig.png" width="21" height="21" alt=""></a>
+                    <a style="padding-left: 10px;" id="li-output" href=""><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/in.png" widtd="20" height="20" alt=""></a>
                 </td>
                 <tr></tr>
         

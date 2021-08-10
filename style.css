@@ -16,6 +16,11 @@ body {
   padding: 50px;
 }
 
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -42,11 +47,32 @@ a {
 
 .switch-theme-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: no-wrap;
   justify-content: center;
   width: 100%;
   padding: 0 0 20px 0;
   top: 0;
+}
+
+.theme-switcher-active {
+  width: 25%;
+  background-color: var(--main-color);
+  display: inline;
+  border-radius: 50px;
+  font-size: 15px;
+  border: none;
+  padding: 10px 10px;
+  text-align: center;
+  height: 100%;
+  transition: all .2s;
+  color: white;
+  margin: 15px 5px;
+}
+.theme-switcher-active {
+  border-radius: 50px;
+  background: #0060fa;
+  box-shadow: inset 20px 20px 60px #02378b,
+              inset -20px -20px 60px #4294ff;
 }
 
 .switch-theme {
@@ -62,8 +88,6 @@ a {
   transition: all .2s;
   color: white;
   margin: 15px 5px;
-  box-shadow: 0 0 60px #eaeaea,
-              -20px -20px 60px #fff;
 }
 .switch-theme:hover,
 .popup-button:hover {
@@ -128,7 +152,8 @@ a {
 
 .form-input,
 .popup-input,
-textarea {
+textarea,
+select {
   width: 80%;
   background-color: transparent;
   border-radius: 20px;
@@ -138,7 +163,8 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
 }
 .button {
@@ -165,12 +191,21 @@ label {
   justify-self: flex-start;
 }
 
+.left {
+  position: absolute;
+  left: 200;
+}
+
 #code {
   margin: 50px;
   height: 50px;
+  width: 50%;
 }
 
 .table-container {
+  position: fixed;
+  top: 15%;
+  left: 50%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

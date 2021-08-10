@@ -1,3 +1,4 @@
+const genderInput = document.getElementById('sex');
 const nameOutput = document.getElementById('name-output');
 const positionOutput = document.getElementById('position-output');
 const phoneOutput = document.getElementById('phone-output');
@@ -16,55 +17,63 @@ const igInput = document.getElementById('ig-link');
 const liLinkOutput = document.getElementById('li-output');
 const liInput = document.getElementById('li-link');
 
+const inputs = [...document.getElementsByClassName('form-input')];
+const outputs = [];
+
+
 
 const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
 const codeToHighlight = document.getElementById('Tabela_01');
-
 //generate signifiture
-function generate() {
+const generate = () => {
     const formOutputs = document.querySelectorAll('[data-output-target]');
     imgUrlOutput.src = imgUrlInput.value;
+
+    if ( !imgUrlInput.value) {
+        if (genderInput.value === 'man') {
+            imgUrlOutput.src = 'http://stopka.ec-at.com/img/avatar-man.png'
+        }
+        if (genderInput.value === 'woman') {
+            imgUrlOutput.src = 'http://stopka.ec-at.com/img/avatar-woman.png'
+        }
+    }
+
     bannerOutput.src = bannerInput.value;
     bannerLinkOutput.href = bannerLinkInput.value;
     fbLinkOutput.href = fbInput.value;
     igLinkOutput.href = igInput.value;
     liLinkOutput.href = liInput.value;
-
-
     formOutputs.forEach(formOutput => {
         formOutput.innerHTML = document.getElementById(formOutput.getAttribute('data-output-target')).value;
     })
     codeOutput.innerHTML = codeToHighlight.outerHTML;
-    return removeNonDisplayed();
+    return removeHidden();
 }
 submitButton.addEventListener('click', generate);
 
 //hiding elements to remove
 let displayed = true;
-const outputs = [...document.getElementsByClassName('remove-button')];
-
-outputs.forEach(toggleElement);
-
-function toggleElement(icon) {
+const removeButtons = [...document.getElementsByClassName('remove-button')];
+const toggleElement = (icon) => {
     icon.addEventListener('click', () => {
         if (displayed) {
-            displayed = false;
             document.getElementById(icon.id+'-output').style.display = 'none';
             icon.querySelector('i').innerHTML = 'add';
-            icon.style.color = 'green';
-        } else {
-            displayed = true;
-            document.getElementById(icon.id+'-output').style.display = 'block';
+            displayed = false;
+        } else if (!displayed){
+            document.getElementById(icon.id+'-output').style.display = 'inline';
             icon.querySelector('i').innerHTML = 'remove';
-            icon.style.color = 'red';
+            displayed = true;
         }
     })
 }
+removeButtons.forEach(toggleElement);
+
 //removing hidden elements
-function removeNonDisplayed() {
-    const nonDisplayElements = [...codeToHighlight.querySelectorAll('*')];
-    nonDisplayElements.forEach(item => {
+const removeHidden = () => {
+    const notDisplayedElements = [...codeToHighlight.querySelectorAll('*')];
+    notDisplayedElements.forEach(item => {
         if (item.style.display === 'none') {
             item.remove();
         }
@@ -76,7 +85,7 @@ const openButtons = [...document.getElementsByClassName('typography-open')];
 const closeButtons = [...document.getElementsByClassName('typography-close')];
 const changeButtons = [...document.getElementsByClassName('popup-button')];
 
-function toggleTypography() {
+const toggleTypography = () => {
     openButtons.forEach(openButton => {
         openButton.addEventListener('click', () => {
             document.getElementById(openButton.getAttribute('data-popup')).style.display = 'flex'
@@ -89,7 +98,7 @@ function toggleTypography() {
     })
 }
 
-function changeTypography() {
+const changeTypography = () => {
     changeButtons.forEach(changeButton => {
         changeButton.addEventListener('click', () => {
             const fontSizeInput = document.getElementById(changeButton.getAttribute('data-popup')+'-font-size');
@@ -112,3 +121,12 @@ const copyCode = () => {
     console.log('skopiowano');
 }
 copyCodeButton.addEventListener('click', copyCode);
+
+
+// (e)=>(e.target.name, e.target.value)
+
+// updateData = (name, value) => {
+//     this.setState({
+//         [name]: value
+//     })
+// }

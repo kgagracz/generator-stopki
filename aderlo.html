@@ -13,10 +13,11 @@
 <div class="left">
 
     <div id="generator">
+        <h1>Wybierz motyw</h1>
         <div class="switch-theme-container">
 			<a href="./index.html" id="netsendo" class="switch-theme">Netsendo</a>
 			<a href="./ecat.html" id="ecat" class="switch-theme">EC-AT</a>
-			<a href="./aderlo.html" id="aderlo" class="switch-theme">Aderlo</a>
+			<a href="./aderlo.html" id="aderlo" class="theme-switcher-active">Aderlo</a>
 			<a href="./bd.html" id="bd" class="switch-theme">BD</a>
         </div>
         <div class="label-container">
@@ -43,16 +44,23 @@
             <label for="phone">Nr telefonu</label><input class="form-input" type="text" id="phone" placeholder="+48 123 123 123">
         </div>
         <div class="label-container">
-            <label for="email">Adres email</label><input class="form-input" type="text" id="email" placeholder="sklep@aderlo.pl"">
+            <label for="email">Adres email</label><input class="form-input" type="text" id="email" placeholder="sklep@aderlo.pl">
         </div>
         <div class="label-container">
-            <label for="website">Strona internetowa</label><input class="form-input" type="text" id="website" value="aderlo.pl">
+            <label for="website">Strona internetowa</label><input class="form-input" type="text" id="website" value="www.aderlo.pl">
         </div>
         <div class="label-container">
-            <label for="img-url">Adres url zdjęcia profilu</label><input class="form-input" type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png"> <div id="image" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
+			<label for="sex">Płeć</label>
+			<select name="sex" id="sex">
+				<option id="man" value="woman">Kobieta</option>
+				<option id="woman" value="man">Mężczyzna</option>
+			</select>
+		</div>
+        <div class="label-container">
+            <label for="img-url">Adres url zdjęcia profilu <i class="material-icons" id="sex-info" title="Jeżeli nie dodasz adresu zdjęcia, dodany zostanie awatar na podstawie płci">info</i></label><input class="form-input" type="text" id="image-url" placeholder="https://netsendo.com/wp-content/uploads/2021/06/04.png"> <div id="image" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
         </div>
         <div class="label-container">
-            <label for="fb-link">Link do profilu Facebook</label><input class="form-input" type="text" id="fb-link" placeholder="https://socialmedia.pl"><div id="fb" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
+            <label for="fb-link">Link do profilu Facebook</label><input value="https://www.facebook.com/aderloPL" class="form-input" type="text" id="fb-link" placeholder="https://socialmedia.pl"><div id="fb" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
         </div>
         <div class="label-container">
             <label for="ig-link">Link do profilu Instagram</label><input class="form-input" type="text" id="ig-link" placeholder="https://socialmedia.pl"><div id="ig" class="icon-container remove-button"><i  class="material-icons">remove</i></div>
@@ -79,21 +87,21 @@
         
         <table id="Tabela_01" style="box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" width="600" cellpadding="0" cellspacing="0">
             <tr style="display: flex; align-items: center;">
-                <td colspan="3" style="display: flex; justify-content: center; align-items: center; width: 35%;">
+                <td colspan="3" style="width: 170px;">
                     <img id="image-output" src="https://netsendo.com/wp-content/uploads/2021/06/julia-dylag.png" widtd="150" height="150" alt="profil" style="object-fit:contain;">
                 </td>
-                <td rowspan="3" style=" padding: 0;">
+                <td rowspan="3" style=" padding: 0; width: 65%;">
                     <a style="margin: 10px; padding: 0;" href="http://netsendo.pl" ><img style="margin: 10px 0" src="https://aderlo.pl/wp-content/uploads/2021/06/logo-nowy-kolor.png" alt="logo" height="20px"></a>
                     <p id="name-output" class="name-typography-output" data-output-target="name" style="margin: 0 10px; font-size: 28px; color: #005582; font-weight: bold;">Ania Kowalska</p>
                     <p id="position-output" data-output-target="position" class="position-typography-output" style="color:#F58130; margin: 0 0 0 10px; font-style: italic; font-size: 18px;">Specialista ds. sprzedaży</p>
                     <ul style="list-style-type: none; font-size: 14px; color: grey; padding: 0 0 0 10px; margin: 10px 0 0 0;">
                         <li style="width: 100%; margin: 0; padding: 0;"><span style="font-weight: bold;">tel: </span> <span id="phone-output" data-output-target="phone">+48 123 123 123</span> </li>
                         <li style="width: 100%; margin: 0; padding: 0;"><span style="font-weight: bold;">email: </span> <span id="email-output" data-output-target="email">name@aderlo.pl</span> </li>
-                        <li style="width: 100%; margin: 0; padding: 0;" id="website-output" data-output-target="website"><a style="text-decoration: none;">aderlo.pl</a></li></br>
+                        <li style="width: 100%; margin: 0; padding: 0;" id="website-output" data-output-target="website"><a style="text-decoration: none;">www.aderlo.pl</a></li></br>
                     </ul>
-                    <a style="padding-left: 10px;" id="fb-output" href="http://facebook.pl"><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/fb.png" widtd="20" height="20" alt=""></a>
-                    <a style="padding-left: 10px;" id="ig-output" href="http://instagram.com"><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/ig.png" widtd="21" height="21" alt=""></a>
-                    <a style="padding-left: 10px;" id="li-output" href="http://linkedin.pl"><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/in.png" widtd="20" height="20" alt=""></a>
+                    <a style="padding-left: 10px;" id="fb-output" href=""><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/fb.png" widtd="20" height="20" alt=""></a>
+                    <a style="padding-left: 10px;" id="ig-output" href=""><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/ig.png" widtd="21" height="21" alt=""></a>
+                    <a style="padding-left: 10px;" id="li-output" href=""><img style="margin-bottom: 10px" src="http://stopka.ec-at.com/img/in.png" widtd="20" height="20" alt=""></a>
                 </td>
                 <tr></tr>
         
