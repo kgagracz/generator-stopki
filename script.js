@@ -2,6 +2,7 @@ const genderInput = document.getElementById('sex');
 const nameOutput = document.getElementById('name-output');
 const positionOutput = document.getElementById('position-output');
 const phoneOutput = document.getElementById('phone-output');
+const phone2Output = document.getElementById('phone2-output');
 const emailOutput = document.getElementById('email-output');
 const websiteOutput = document.getElementById('website-output');
 const imgUrlInput = document.getElementById('image-url');
