@@ -119,7 +119,7 @@ const copyCodeButton = document.getElementById('copy-code');
 const copyCode = () => {
     document.getElementById('code').select();
     document.execCommand('copy');
-    console.log('skopiowano');
+    alert('Kod stopki został skopiowany do schowka');
 }
 copyCodeButton.addEventListener('click', copyCode);
 
