@@ -17,11 +17,18 @@ const igLinkOutput = document.getElementById('ig-output');
 const igInput = document.getElementById('ig-link');
 const liLinkOutput = document.getElementById('li-output');
 const liInput = document.getElementById('li-link');
+const ttLinkOutput = document.getElementById('tt-output');
+const ttInput = document.getElementById('tt-link');
+const teLinkOutput = document.getElementById('te-output');
+const teInput = document.getElementById('te-link');
 
 const inputs = [...document.getElementsByClassName('form-input')];
 const outputs = [];
 
-
+// removing preloader
+    setInterval(() => {
+      document.getElementById('preloader').classList.remove('show-preloader');
+    }, 1300);
 
 const submitButton = document.getElementById('submit');
 const codeOutput = document.getElementById('code');
@@ -45,6 +52,8 @@ const generate = () => {
     fbLinkOutput.href = fbInput.value;
     igLinkOutput.href = igInput.value;
     liLinkOutput.href = liInput.value;
+    ttLinkOutput.href = ttInput.value;
+    teLinkOutput.href = teInput.value;
     formOutputs.forEach(formOutput => {
         formOutput.innerHTML = document.getElementById(formOutput.getAttribute('data-output-target')).value;
     })
